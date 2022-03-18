@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Teamer: Make the Perfect Cuppa</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Raleway&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Teamer</h1>
+        <h2>Make the Perfect Cuppa</h2>
+
+        <aside class="changelog">
+            <span>&#43;</span> Changelog
+            <div class="changelog-contents">
+                <p><strong>July 14, 2020:</strong> Added this changelog :) Also cleaned up some mobile/tablet styling.</p>
+                <p><strong>June 22, 2020:</strong> Fixed the bug caused by adding/removing time while the timer was running. Added basic error checking for no time entered. Added an alarm that plays when the timer is done.</p>
+                <p><strong>June 19, 2020:</strong> Fixed an issue with the time display, where it would skip seconds or display ":60". I'm still working on fixing the bug caused by adding time while it's running.</p>
+                <p><strong>June 12, 2020:</strong> Added some credit and disclaimer text. Made the time user-adjustable with Add/Subtract buttons. The user now also has control over the timer's pause, play, and stop behaviors.</p> 
+                <p><strong>May 21, 2020:</strong> Original version published.</p>
+            </div>
+        </aside>
+        <div class="tea-buttons">
+
+        </div>
+        <div class="tea-timer">
+            <div class="time-controls minute-controls">
+                <button aria-label="Add 1 minute" type="button" class="minute-add" title="Add 1 minute" value="60">&#x2B06;</button>
+                <button type="button" aria-label="Subtract 1 minute" class="minute-subtract" title="Subtract 1 minute" value="-60">&#x2B07;</button>
+            </div>
+            <span class="minute">00</span>:<span class="second">00</span> 
+            <div class="time-controls second-controls">
+                <button aria-label="Add 10 seconds" type="button" class="second-add" title="Add 10 seconds" value="10">&#x2B06;</button>
+                <button type="button" aria-label="Subtract 10 seconds" class="second-subtract" title="Subtract 10 seconds" value="-10">&#x2B07;</button>
+            </div>
+            <div class="play-controls">
+                <button type="button" class="play-pause" value="0">&#x23EF;</button>
+                <button type="button" class="stop" value="0">&#x23F9;</button>
+                <p class="error"></p>
+            </div>
+        </div>
+        <audio class="alarm" src="219244__zyrytsounds__alarm-clock-short.wav"></audio>
+        <aside class="credit-disclaimer">
+            <p>Tea steeping times and temperatures via <a href="http://blog.davidstea.com/en/hot-stuff-tea-steeping-temperatures/">David's Tea</a>.</p>
+            <p>Tea steeping is a contentious topic; when available, we recommend using the time/temperature on the container.</p>
+            <p><a href="https://freesound.org/people/ZyryTSounds/sounds/219244/" target="_blank">"Alarm clock short"</a> sound effect by <a href="https://freesound.org/people/ZyryTSounds/" target="_blank">ZyryTSounds on Freesound.org</a></p>
+        </aside>
+
+        <script src="index.js"></script>
+    </body>
+</html>

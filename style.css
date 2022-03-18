@@ -1,0 +1,160 @@
+body {
+    margin:1rem;
+    font-family: 'Raleway', sans-serif;
+}
+a {
+    color:#094161;
+    font-weight:bold;
+}
+button {
+    cursor:pointer;
+}
+a:hover, a:active {
+    color:#278cc0;
+}
+h1 {
+    font-size:3rem;
+    margin:2rem 0 0 0;
+    text-align:center;
+    font-family: 'Bree Serif', serif;
+}
+h2 {
+    text-align:center;
+    font-family: 'Raleway', sans-serif;
+}
+h3 {
+    font-family: 'Bree Serif', serif;
+    text-align:center;
+}
+.changelog {
+    position:absolute;
+    top:0;
+    right:0;
+    margin:1rem;
+    padding:0 10px;
+    border:1px solid #777;
+    border-radius:5px;
+    cursor: pointer;
+    overflow:hidden;
+    width:100px;
+    height:30px;
+    transition:0.5s all;
+    background:#fff;
+    z-index:2;
+    text-align:right;
+    line-height:1;
+}
+.changelog span {
+    font-size: 2rem;
+    font-weight: bold;
+    position: relative;
+    vertical-align: middle;
+}
+.changelog-contents {
+    opacity:0;
+    transition:3s all;
+}
+.changelog.open {
+    width:calc(100% - 4rem); /* minus margin on body and margins on the button */
+    height:100%;
+}
+.changelog.open .changelog-contents {
+    opacity:1;
+}
+.tea-buttons {
+    display: flex;
+    margin: 2rem auto;
+    justify-content: center;
+    flex-wrap:wrap;
+}
+
+.tea-btn {
+    border-radius:50%;
+    padding:0;
+    margin:1rem;
+    min-width:100px;
+    flex:1;
+    position:relative;
+    border-width:1px;
+    border-style:dashed;
+    /* colors will be set in JS from teas Object */
+}
+.tea-btn:before {
+    content: "";
+    display: inline-block;
+    padding-top: calc(100% - 2px);/* account for borders on parent*/
+}
+.tea-btn h3 {
+    position:absolute;
+    top:3%;
+    left:0;
+    right:0;
+    font-size: 1.25rem;
+}
+.steeping-instructions {
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+    right: 0;
+    font-family: 'Raleway', sans-serif;
+    font-size:14px;
+}
+.tea-timer {
+    text-align: center;
+    display: flex;
+    font-family: 'Raleway', sans-serif;
+    font-size: 3rem;
+    border: 1px solid #777;
+    margin: 2rem auto;
+    width: 80%;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    line-height: 3rem;
+    flex-wrap:wrap;
+}
+.time-controls {
+    display:flex;
+    flex-direction:column;
+    flex-wrap:nowrap;
+    margin:0 0.75rem;
+}
+.play-controls {
+    width: 100%;
+    margin:0;
+}
+.play-controls button {
+    background: none;
+    border: none;
+    font-size: 26px;
+    padding:0;
+}
+.credit-disclaimer {
+    text-align:center;
+    font-family: 'Raleway', sans-serif;
+    font-style:italic;
+}
+
+.error {
+    color:red;
+    font-size:1rem;
+    opacity:0;
+    transition:opacity 0.3s
+}
+
+@media screen and (min-width: 48em) {
+    h1 {
+        margin-top:0;
+    }
+    .tea-timer {
+        width: 40%;
+    }
+    .changelog.open {
+        width:50%;
+    }
+}
+@media screen and (min-width: 60.625em) {
+    .tea-timer {
+        width: 30%;
+    }
+}
